@@ -10,10 +10,22 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
-    "mongoose": "4.8.7",
+    "express-session": "1.15.1",
+    "md5": "2.2.1",
+    "mongoose": "^4.8.7",
     "mongoose-mongodb-errors": "0.0.2",
     "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose-email": "^0.1.3",
     "pug": "2.0.0-beta11",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "validator": "7.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.24.0",
+    "babel-loader": "6.4.0",
+    "babel-preset-es2015": "6.24.0",
+    "webpack": "2.2.1"
   }
 }
