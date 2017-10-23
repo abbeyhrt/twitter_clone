@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const md5 = require('md5');
 const validator = require('validator');
 
-const User = new Schema({
+const userSchema = new Schema({
   email: {
     type: String,
     unique: true,
@@ -19,6 +19,6 @@ const User = new Schema({
   },
 });
 
-User.plugin(passportLocalMongooseEmail);
+userSchema.plugin(passportLocalMongooseEmail, { usernameField: 'email' });
 
-module.exports = mogoose.model('User');
+module.exports = mongoose.model('User');
