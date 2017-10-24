@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  form.form(action="/login" method="POST")
+    h2= title
+    label(for="Username") Name
+    input(type="text" name="username")
+    label(for="Password") Password
+    input(type="password" name="password")
+    button(type="Submit") Submit
+  p Not a member?
+    a(href="#")  Click Here!
+  a(href="#") Forgot Password?
+

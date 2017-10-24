@@ -2,7 +2,9 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const favicon = require('serve-favicon');
+const flash = require('connect-flash');
 const logger = require('morgan');
+const expressValidator = require('express-validator');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
@@ -19,6 +21,14 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// // The flash middleware let's us use req.flash('error', 'Shit!'), which will then pass that message to the next page the user requests
+app.use(flash());
+
+// exposes methods for validating data.
+//Used heavily on userController.validateRegister
+app.use(expressValidator());
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
