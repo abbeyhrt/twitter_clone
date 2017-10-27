@@ -12,7 +12,7 @@ const userSchema = new Schema({
     unique: true,
     lowercase: true,
     trim: true,
-    validate: [validator.isEmail, 'Inavlied Email Address'],
+    validate: [validator.isEmail, 'Invalid Email Address'],
     required: 'An email address is required',
   },
   name: {
@@ -22,7 +22,7 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.plugin(passportLocalMongooseEmail, { usernameField: 'email' });
+userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 userSchema.plugin(mongodbErrorHandler);
 
 module.exports = mongoose.model('User', userSchema);

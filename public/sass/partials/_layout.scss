@@ -1,0 +1,41 @@
+$blue40: #5392ff;
+$text-color: #272727;
+$offwhite: #f0f4f4;
+$innerwhite: #fbfcfc;
+$blue: #a8c0f3;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+  font-family: 'Helvetica Neue';
+  font-weight: 300;
+  color: $text-color;
+  background-color: $offwhite;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  margin: 8%;
+  background-color: $innerwhite;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 8%;
+  background-color: $blue;
+}
+
+.head {
+  margin: 1rem;
+  font-size: 2.37rem;
+}
+
+.subhead {
+  margin: 1rem;
+}

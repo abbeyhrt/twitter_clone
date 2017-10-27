@@ -1,0 +1,31 @@
+.title {
+  margin: 0px;
+  padding: 1rem;
+  padding-bottom: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  padding: 1rem;
+
+  width: 80%;
+  //padding: 0.75rem;
+}
+
+.label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: $blue40;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 16%;
+  border: 0px;
+  font-size: 1rem;
+  font-family: 'Helvetica Neue';
+  font-weight: 300;
+}

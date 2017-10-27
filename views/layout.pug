@@ -2,9 +2,24 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
   body
     block header
-      h1 Twitter Clone
+      .header
+        h1.head Snippets
+        p.subhead A Twitter Clone written with Node.js and Express.js
+
+    block messages
+      if locals.flashes
+          .flash-messages
+            - const categories = Object.keys(locals.flashes)
+            each category in categories
+              each message in flashes[category]
+                .flash(class=`flash--${category}`)
+                  p.flash__text!= message
+                  button.flash__remove(onClick="this.parentElement.remove()") &times;
+
+
 
     block content
+      .inner
