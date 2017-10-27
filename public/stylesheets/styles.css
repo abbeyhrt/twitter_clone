@@ -40,7 +40,7 @@
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 3px; }
   .flash--success {
-    background: linear-gradient(135deg, #d2ff52 0%, #91e842 100%); }
+    background: linear-gradient(135deg, #5392ff 0%, #a8c0f3 100%); }
   .flash--error {
     background: linear-gradient(20deg, #a8c0f3 0%, #5392ff 100%); }
   .flash--info {
@@ -70,7 +70,11 @@ a {
   display: flex;
   align-items: center;
   height: 8%;
-  background-color: #a8c0f3; }
+  background-color: #a8c0f3;
+  color: #272727; }
+
+.header-title {
+  color: #272727; }
 
 .head {
   margin: 1rem;
@@ -104,5 +108,13 @@ a {
   font-size: 1rem;
   font-family: 'Helvetica Neue';
   font-weight: 300; }
+
+.nav {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  flex-direction: flex-end; }
+  .nav__item {
+    padding: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */

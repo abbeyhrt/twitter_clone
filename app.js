@@ -13,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const errorHandlers = require('./handlers/errorHandlers');
 require('./handlers/passport');
+const fs = require('fs');
 
 const routes = require('./routes/index');
 

@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const router = express.Router();
 const userController = require('../controllers/userController');
+const authController = require('../controllers/authController');
 
 router.use(morgan('dev'));
 
@@ -18,6 +19,7 @@ router.get('/flash', function(req, res) {
 // Routes for user login and register path
 
 router.get('/login', userController.loginForm);
+router.post('/login', authController.login);
 router.get('/register', userController.registerForm);
 
 // 1. Validate the registration data
@@ -26,7 +28,11 @@ router.get('/register', userController.registerForm);
 router.post(
   '/register',
   userController.validateRegister,
-  userController.register
+  userController.register,
+  authController.login
 );
 
+router.get('/logout', authController.logout);
+
+router.get('/account', authController.isLoggedIn(userController.account));
 module.exports = router;

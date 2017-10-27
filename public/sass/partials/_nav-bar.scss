@@ -1,0 +1,11 @@
+.nav {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  flex-direction: flex-end;
+  &__item {
+    padding: 1rem;
+  }
+  // &__link {
+  // }
+}
