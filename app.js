@@ -14,6 +14,7 @@ const bodyParser = require('body-parser');
 const errorHandlers = require('./handlers/errorHandlers');
 require('./handlers/passport');
 const fs = require('fs');
+exports.moment = require('moment');
 
 const routes = require('./routes/index');
 

@@ -36,3 +36,9 @@ router.get('/logout', authController.logout);
 
 router.get('/account', authController.isLoggedIn(userController.account));
 module.exports = router;
+
+//router.get('/snippets');
+router.get('/snippets/new');
+//router.get('/snippets/edit')
+//router.get('/snippets/:id');
+//router.get('/snippets/all');
