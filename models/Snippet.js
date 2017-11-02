@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+//const Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
-const mongodbErrorHandler = require('mongoose-mongodb-errors');
-const passportLocalMongoose = require('passport-local-mongoose');
+//const mongodbErrorHandler = require('mongoose-mongodb-errors');
+//const passportLocalMongoose = require('passport-local-mongoose');
 
-const snippetSchema = new Schema({
+const snippetSchema = new mongoose.Schema({
   created: {
     type: Date,
     default: Date.now,

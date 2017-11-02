@@ -1,5 +1,5 @@
-mixin snippetForm(user)
-  form.form(action ="/snippets/new" method="POST")
-    label.label(for="text") What are you thinking today?
-    input.text-field(type="text" name = "snippet")
+mixin snippetForm()
+  -
+  form.form(action =`/snippets/${user._id}` method="POST")
+    textArea(name="text" placeholder="What are you thinking today?")
     input.button(type="submit" value="Share")

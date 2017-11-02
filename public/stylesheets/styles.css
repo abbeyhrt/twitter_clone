@@ -1,4 +1,3 @@
-@import url(../../node_modules/normalize.css/normalize.css);
 @keyframes slideIn {
   0% {
     transform: translateX(-10px); }

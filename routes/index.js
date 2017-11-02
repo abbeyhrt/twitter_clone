@@ -41,7 +41,7 @@ router.get('/account/edit', userController.editAccount);
 router.post('/account/edit', catchErrors(userController.updateAccount));
 
 //router.get('/snippets');
-router.post('/snippets/new', snippetController.addSnippet);
+router.post('/snippets/:id', catchErrors(snippetController.addSnippet));
 //router.get('/snippets/edit')
 //router.get('/snippets/:id');
 //router.get('/snippets/all');
