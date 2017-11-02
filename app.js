@@ -13,10 +13,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const errorHandlers = require('./handlers/errorHandlers');
 require('./handlers/passport');
-const fs = require('fs');
-exports.moment = require('moment');
 
-const routes = require('./routes/index');
+const routes = require('./routes');
+const helpers = require('./helpers');
 
 const app = express();
 
@@ -48,7 +47,7 @@ app.use(passport.session());
 app.use(flash());
 
 app.use((req, res, next) => {
-  //res.locals.h = helpers;
+  res.locals.h = helpers;
   res.locals.flashes = req.flash();
   res.locals.user = req.user || null;
   res.locals.currentPath = req.path;

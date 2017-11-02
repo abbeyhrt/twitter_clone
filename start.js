@@ -12,6 +12,7 @@ mongoose.Promise = global.Promise; //In the Wes Bos' code, he uses promises and 
 
 //import any models needed(change in future to unhighlighted);
 require('./models/User');
+require('./models/Snippet');
 
 // start app
 const app = require('./app');

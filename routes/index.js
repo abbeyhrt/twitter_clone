@@ -3,12 +3,14 @@ const morgan = require('morgan');
 const router = express.Router();
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
+const { catchErrors } = require('../handlers/errorHandlers');
+const snippetController = require('../controllers/snippetController');
 
 router.use(morgan('dev'));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('layout', { title: 'FauxTweet' });
+  res.render('layout', { title: 'Snippets: A Twitter Clone' });
 });
 
 router.get('/flash', function(req, res) {
@@ -34,11 +36,13 @@ router.post(
 
 router.get('/logout', authController.logout);
 
-router.get('/account', authController.isLoggedIn(userController.account));
-module.exports = router;
+router.get('/account', authController.isLoggedIn, userController.account);
+router.get('/account/edit', userController.editAccount);
+router.post('/account/edit', catchErrors(userController.updateAccount));
 
 //router.get('/snippets');
-router.get('/snippets/new');
+router.post('/snippets/new', snippetController.addSnippet);
 //router.get('/snippets/edit')
 //router.get('/snippets/:id');
 //router.get('/snippets/all');
+module.exports = router;

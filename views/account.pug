@@ -1,6 +1,13 @@
 extends layout
 
 block content
+  //- pre=h.dump(user)
   .inner
     h2.title=title
-    p This is your account page, #{user.name}
+    p.qs This is your account page, #{user.name}
+    a.qs(href="/account/edit") Want to make some changes?
+
+
+
+
+

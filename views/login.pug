@@ -5,8 +5,8 @@ block content
     form.form(action="/login" method="POST")
       h2= title
       label.label(for="email") Email Address
-      input.text-field(type="text" name="email")
-      label.label(for="Password") Password
+      input.text-field(type="email" name="email")
+      label.label(for="password") Password
       input.text-field(type="password" name="password")
       input.button(type="Submit" value="Submit")
       p.qs Not a member?

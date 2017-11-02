@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 const mongodbErrorHandler = require('mongoose-mongodb-errors');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-const snippetScema = new Schema({
+const snippetSchema = new Schema({
   created: {
     type: Date,
     default: Date.now,
@@ -21,4 +21,4 @@ const snippetScema = new Schema({
   },
 });
 
-module.exports = mongoose.model;
+module.exports = mongoose.model('Snippet', snippetSchema);
