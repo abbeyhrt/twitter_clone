@@ -81,12 +81,16 @@ a {
   font-size: 2.37rem; }
 
 .subhead {
-  margin: 1rem; }
+  margin: 1rem;
+  padding-right: 20rem; }
 
 .qs {
   display: block;
   padding: 1rem; }
 
+@media (max-width: 850px) {
+  .subhead {
+    display: none; } }
 .title {
   margin: 0px;
   padding: 1rem;
@@ -113,11 +117,14 @@ a {
   font-family: 'Helvetica Neue';
   font-weight: 300; }
 
+.snippet-field {
+  width: 15rem;
+  resize: none; }
+
 .nav {
   text-decoration: none;
   display: flex;
-  list-style: none;
-  flex-direction: flex-end; }
+  list-style: none; }
   .nav__item {
     padding: 1rem; }
 

@@ -42,10 +42,17 @@ a {
 
 .subhead {
   margin: 1rem;
+  padding-right: 20rem;
 }
 
 .qs {
   display: block;
   //margin: 1rem;
   padding: 1rem;
+}
+
+@media (max-width: 850px) {
+  .subhead {
+    display: none;
+  }
 }

@@ -1,0 +1,11 @@
+mixin snippetCard(snippet = {})
+  .inner
+    .snippets
+      each snippet in snippets
+        p= snippet.text
+
+  //- these will probably not work bc i don't think .author = author name, its the id
+  //- so then i'll need to find the user name with an ID lookup
+
+  //- p.qs #{snippet.author}
+  //- p.qs #{snippet.text}

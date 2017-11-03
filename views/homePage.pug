@@ -1,0 +1,14 @@
+extends layout
+
+include mixins/_snippetForm
+include mixins/_snippetCard
+
+block content
+  if user
+    +snippetForm(user)
+  +snippetCard(snippet)
+
+
+
+
+

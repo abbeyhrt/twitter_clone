@@ -1,7 +1,5 @@
 doctype html
 
-include mixins/_snippetForm
-
 html
   head
     title= title
@@ -17,7 +15,7 @@ html
             li.nav__item: a.nav__link(href="/logout") Log Out
             li.nav__item: a.nav__link(href="/account") My Account
           else
-            li.nav__item: a.nav__link(href="/register") Register
+            li.nav__item: a.nav__link(href="/register") Sign Up
             li.nav__item: a.nav__link(href="/login") Log In
 
 
@@ -31,9 +29,6 @@ html
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
 
-
-
     block content
-      .inner
-      if user
-        +snippetForm(user)
+      h2 if this is visible then Abbey, you fucked up somewhere
+

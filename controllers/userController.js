@@ -7,7 +7,7 @@ exports.loginForm = (req, res) => {
 };
 
 exports.registerForm = (req, res) => {
-  res.render('register', { title: 'Register' });
+  res.render('register', { title: 'Sign Up' });
 };
 
 // a middleware to validare the register
@@ -35,7 +35,7 @@ exports.validateRegister = (req, res, next) => {
   if (errors) {
     req.flash('error', errors.map(err => err.msg));
     res.render('register', {
-      title: 'Register',
+      title: 'Sign Up',
       body: req.body,
       flashes: req.flash(),
     });
