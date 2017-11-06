@@ -1,5 +1,11 @@
+$offwhite: #e3ecec;
+$innerwhite: #fbfcfc;
+
 .snippets {
   display: flex;
-  margin: 1rem;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 1rem;
   flex-direction: column;
+  background-color: $innerwhite;
 }

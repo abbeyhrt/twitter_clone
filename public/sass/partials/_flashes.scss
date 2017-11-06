@@ -4,17 +4,17 @@ $offwhite: #f4f7f7;
 $innerwhite: #fbfcfc;
 $blue: #a8c0f3;
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-10px);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+// @keyframes slideIn {
+//   0% {
+//     transform: translateX(-10px);
+//   }
+//   50% {
+//     transform: translateX(10px);
+//   }
+//   100% {
+//     transform: translateX(0px);
+//   }
+// }
 
 .flash {
   background: white;

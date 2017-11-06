@@ -1,12 +1,7 @@
 mixin snippetCard(snippet = {})
-  .inner
-    .snippets
       each snippet in snippets
-        p= snippet.author.name
-        p= snippet.text
-        time(datetime=snippet.created)= h.moment(snippet.created).fromNow()
-  //- these will probably not work bc i don't think .author = author name, its the id
-  //- so then i'll need to find the user name with an ID lookup
+        .snippets
+          p.qs= `${snippet.author.name}`
+          p.qs= snippet.text
+          time.qs(datetime=snippet.created)= h.moment(snippet.created).fromNow()
 
-  //- p.qs #{snippet.author}
-  //- p.qs #{snippet.text}
