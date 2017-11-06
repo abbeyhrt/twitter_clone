@@ -57,7 +57,7 @@ body {
   font-family: 'Helvetica Neue';
   font-weight: 300;
   color: #272727;
-  background-color: #f0f4f4; }
+  background-color: #e9ebee; }
 
 a {
   text-decoration: none; }
@@ -87,6 +87,12 @@ a {
 .qs {
   display: block;
   padding: 1rem; }
+
+.avatar {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center; }
 
 @media (max-width: 850px) {
   .subhead {
@@ -127,5 +133,10 @@ a {
   list-style: none; }
   .nav__item {
     padding: 1rem; }
+
+.snippets {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column; }
 
 /*# sourceMappingURL=styles.css.map */

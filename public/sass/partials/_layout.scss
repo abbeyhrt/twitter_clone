@@ -1,6 +1,6 @@
 $blue40: #5392ff;
 $text-color: #272727;
-$offwhite: #f0f4f4;
+$offwhite: #e9ebee;
 $innerwhite: #fbfcfc;
 $blue: #a8c0f3;
 
@@ -49,6 +49,13 @@ a {
   display: block;
   //margin: 1rem;
   padding: 1rem;
+}
+
+.avatar {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center;
 }
 
 @media (max-width: 850px) {
