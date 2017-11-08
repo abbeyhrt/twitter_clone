@@ -1,7 +1,11 @@
-mixin snippetCard(snippet = {})
+mixin snippetCard(snippet)
       each snippet in snippets
-        .snippets
+        pre=h.dump(snippet)
+        pre=h.dump(snippet.author.name)
+        .snippet-author
+          img.gravatar(src=snippet.author.avatar)
           p.qs= `${snippet.author.name}`
+        .snippet-content
           p.qs= snippet.text
           time.qs(datetime=snippet.created)= h.moment(snippet.created).fromNow()
 

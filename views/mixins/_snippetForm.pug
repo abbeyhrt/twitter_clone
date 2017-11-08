@@ -1,5 +1,5 @@
-mixin snippetForm()
+mixin snippetForm(user)
   .inner
     form.form(action =`/snippets/${user._id}` method="POST")
       textArea.snippet-field(name="text" placeholder="What are you thinking today?" maxlength="220")
-      input.button(type="submit" value="Share" cols:"30" rows:"5")
+      input.button(type="submit" value="Share" cols="30" rows="10")

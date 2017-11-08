@@ -2,7 +2,7 @@ $blue40: #5392ff;
 $text-color: #272727;
 $offwhite: #e3ecec;
 $innerwhite: #fbfcfc;
-$blue: #a8c0f3;
+$blue: #95c4f3;
 
 body {
   width: 100vw;
@@ -26,6 +26,7 @@ a {
 }
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 8%;
   background-color: $blue;
@@ -54,8 +55,16 @@ a {
 .avatar {
   min-width: 30px;
   height: 30px;
+  margin: 1rem;
   border-radius: 50%;
   align-self: center;
+}
+
+.gravatar {
+  padding: 1rem;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 @media (max-width: 850px) {

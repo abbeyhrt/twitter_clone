@@ -61,9 +61,10 @@ a {
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 8%;
-  background-color: #a8c0f3;
+  background-color: #95c4f3;
   color: #272727; }
 
 .header-title {
@@ -85,8 +86,15 @@ a {
 .avatar {
   min-width: 30px;
   height: 30px;
+  margin: 1rem;
   border-radius: 50%;
   align-self: center; }
+
+.gravatar {
+  padding: 1rem;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%; }
 
 @media (max-width: 850px) {
   .subhead {
@@ -128,12 +136,18 @@ a {
   .nav__item {
     padding: 1rem; }
 
-.snippets {
+.snippet-author {
   display: flex;
   margin-left: 8%;
   margin-right: 8%;
-  margin-bottom: 1rem;
-  flex-direction: column;
+  background-color: #fbfcfc; }
+
+.snippet-content {
+  display: flex;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
   background-color: #fbfcfc; }
 
 /*# sourceMappingURL=styles.css.map */

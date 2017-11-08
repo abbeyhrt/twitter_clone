@@ -11,6 +11,7 @@ const snippetSchema = new mongoose.Schema({
   },
   author: {
     type: mongoose.Schema.ObjectId,
+    name: mongoose.Schema.ObjectId.name
     ref: 'User',
     required: 'You must have an author',
   },

@@ -43,6 +43,7 @@ router.get('/logout', authController.logout);
 router.get('/account', authController.isLoggedIn, userController.account);
 router.get('/account/edit', userController.editAccount);
 router.post('/account/edit', catchErrors(userController.updateAccount));
+router.get('/account/snippets', snippetController.showPersonalSnippets);
 
 //router.get('/snippets');
 router.post('/snippets/:id', catchErrors(snippetController.createSnippet));

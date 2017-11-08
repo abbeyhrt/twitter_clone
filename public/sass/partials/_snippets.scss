@@ -1,11 +1,23 @@
 $offwhite: #e3ecec;
 $innerwhite: #fbfcfc;
 
-.snippets {
+.snippet-author {
   display: flex;
   margin-left: 8%;
   margin-right: 8%;
-  margin-bottom: 1rem;
-  flex-direction: column;
+  //margin-bottom: 1rem;
+  // justify-content: space-between;
+  background-color: $innerwhite;
+}
+
+// .time {
+//   //justify-content: flex-end;
+// }
+.snippet-content {
+  display: flex;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
   background-color: $innerwhite;
 }
