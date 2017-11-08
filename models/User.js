@@ -23,9 +23,7 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.virtual('avatar').get(function() {
-  faker.image.avatar;
-});
+userSchema.virtual('avatar');
 
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 userSchema.plugin(mongodbErrorHandler);
