@@ -78,7 +78,13 @@ exports.updateAccount = async (req, res) => {
 };
 
 exports.publicProfile = async (req, res) => {
-  const user = await res.render('publicProfile', { title: 'Snippets' });
+  const user = await User.findOne({ _id: req.params.id });
+
+  const snippets = await Snippet.find({ author: req.params.id }).populate(
+    'author'
+  );
+  snippets.reverse();
+  res.render('publicProfile', { title: 'Snippets', snippets, user });
 };
 
 exports.showAllUsers = async (req, res) => {

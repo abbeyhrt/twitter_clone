@@ -1,8 +1,9 @@
 extends layout
 
-include mixins/_userCard
+include mixins/_snippetCard
 
 block content
-  h2.title Recent Activity
-  +userCard()
+  .inner
+    h2.title #{user.name}'s Recent Activity
+  +snippetCard()
 

@@ -2,7 +2,7 @@ mixin snippetCard(snippet)
       each snippet in snippets
         .snippet-author
           img.gravatar(src=snippet.author.avatar)
-          p.qs= `${snippet.author.name}`
+          a.link(href=`/user/${snippet.author._id}`) #{snippet.author.name}
         .snippet-content
           p.qs= snippet.text
           time.qs(datetime=snippet.created)= h.moment(snippet.created).fromNow()

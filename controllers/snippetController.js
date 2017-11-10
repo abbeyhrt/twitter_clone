@@ -15,7 +15,6 @@ exports.showAllSnippets = async (req, res) => {
   // Query the DB for a list of all snippets
   const snippets = await Snippet.find().populate('author');
   snippets.reverse();
-  console.log(snippets);
   res.render('homePage', { title: 'Snippets', snippets: snippets });
 };
 
@@ -24,7 +23,6 @@ exports.showPersonalSnippets = async (req, res) => {
     'author'
   );
   snippets.reverse();
-  console.log(snippets);
   res.render('yourSnippets', { title: 'Snippets', snippets });
 };
 //how i am thinking the public profile will work is first, i need a simple list of all users
