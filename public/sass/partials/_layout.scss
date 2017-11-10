@@ -23,7 +23,14 @@ a {
 .inner {
   margin: 8%;
   background-color: $innerwhite;
+
+  &__user {
+    margin: 1rem;
+    background-color: $innerwhite;
+    width: 88%;
+  }
 }
+
 .header {
   display: flex;
   justify-content: space-between;

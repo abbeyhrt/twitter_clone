@@ -80,3 +80,9 @@ exports.updateAccount = async (req, res) => {
 exports.publicProfile = async (req, res) => {
   const user = await res.render('publicProfile', { title: 'Snippets' });
 };
+
+exports.showAllUsers = async (req, res) => {
+  const users = await User.find();
+  console.log(users);
+  res.render('users', { title: 'Snippets', users });
+};

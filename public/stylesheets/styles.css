@@ -58,6 +58,10 @@ a {
 .inner {
   margin: 8%;
   background-color: #fbfcfc; }
+  .inner__user {
+    margin: 1rem;
+    background-color: #fbfcfc;
+    width: 88%; }
 
 .header {
   display: flex;
