@@ -1,7 +1,5 @@
 mixin snippetCard(snippet)
       each snippet in snippets
-        pre=h.dump(snippet)
-        pre=h.dump(snippet.author.name)
         .snippet-author
           img.gravatar(src=snippet.author.avatar)
           p.qs= `${snippet.author.name}`

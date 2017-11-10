@@ -45,6 +45,8 @@ router.get('/account/edit', userController.editAccount);
 router.post('/account/edit', catchErrors(userController.updateAccount));
 router.get('/account/snippets', snippetController.showPersonalSnippets);
 
+router.get('/profile/:id', userController.publicProfile);
+
 //router.get('/snippets');
 router.post('/snippets/:id', catchErrors(snippetController.createSnippet));
 //router.get('/snippets/edit')

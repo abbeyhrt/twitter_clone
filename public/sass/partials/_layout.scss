@@ -50,6 +50,20 @@ a {
   display: block;
   margin: 0px;
   padding: 1rem;
+  text-decoration: none;
+  color: $text-color;
+}
+
+.link {
+  display: block;
+  margin: 0px;
+  padding: 1rem;
+  text-decoration: none;
+  color: $text-color;
+}
+
+.link:hover {
+  color: $blue40;
 }
 
 .avatar {

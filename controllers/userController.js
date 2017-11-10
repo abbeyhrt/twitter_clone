@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const promisify = require('es6-promisify');
+const Snippet = mongoose.model('Snippet');
 
 exports.loginForm = (req, res) => {
   res.render('login', { title: 'Login' });
@@ -74,4 +75,8 @@ exports.updateAccount = async (req, res) => {
   );
   req.flash('success', 'Account Info Updated!');
   res.redirect('/account');
+};
+
+exports.publicProfile = async (req, res) => {
+  const user = await res.render('publicProfile', { title: 'Snippets' });
 };

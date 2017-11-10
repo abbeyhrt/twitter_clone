@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 const md5 = require('md5');
+// const Snippet = mongoose.model('Snippet');
 const validator = require('validator');
 const mongodbErrorHandler = require('mongoose-mongodb-errors');
 const passportLocalMongoose = require('passport-local-mongoose');
@@ -21,9 +22,16 @@ const userSchema = new Schema({
     required: 'Please supply a name!',
     trim: true,
   },
+  avatar: {
+    type: String,
+    required: 'Please supply an avatar!',
+    trim: true,
+  },
+  // snippet: {
+  //   type: mongoose.Schema.ObjectId,
+  //   ref: 'Snippet',
+  // },
 });
-
-userSchema.virtual('avatar');
 
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 userSchema.plugin(mongodbErrorHandler);

@@ -13,7 +13,7 @@ exports.createSnippet = async (req, res) => {
 
 exports.showAllSnippets = async (req, res) => {
   // Query the DB for a list of all snippets
-  const snippets = await Snippet.find();
+  const snippets = await Snippet.find().populate('author');
   snippets.reverse();
   console.log(snippets);
   res.render('homePage', { title: 'Snippets', snippets: snippets });
