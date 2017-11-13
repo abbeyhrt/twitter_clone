@@ -3,13 +3,19 @@ $text-color: #272727;
 $offwhite: #e3ecec;
 $innerwhite: #fbfcfc;
 $blue: #95c4f3;
+// Key for variables:
+// FS = font-size
+$FS-head: 2.618em;
+$FS-subhead: 1.618em;
+$FS-body: 1em;
+$FS-footer: 0.618em;
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0px;
   padding: 0px;
-  font-size: 1rem;
+  font-size: $FS-body;
   font-family: 'Helvetica Neue';
   font-weight: 300;
   color: $text-color;
@@ -45,7 +51,7 @@ a {
 
 .head {
   margin: 1rem;
-  font-size: 2.37rem;
+  font-size: $FS-head;
 }
 
 .subhead {
@@ -88,8 +94,14 @@ a {
   border-radius: 50%;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 400px) and (max-height: 800px) {
   .subhead {
     display: none;
   }
+  .head {
+    font-size: $FS-subhead;
+  }
+  // .nav__link {
+  // will become a button or hamburger  font-size: $FS-body;
+  // }
 }
