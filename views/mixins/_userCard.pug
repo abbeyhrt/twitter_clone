@@ -2,6 +2,6 @@ mixin userCard(user)
   .inner
   each user in users
     .inner__user
-      a.link(href="/user/:id")= user.name
+      a.link(href=`/user/${user._id}`)= user.name
       p.qs= user.email
-      p.qs= user.snippet
+

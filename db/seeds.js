@@ -54,6 +54,7 @@ const seed = async () => {
       email: 'test@test.com',
       password: 'test',
       avatar: faker.image.avatar(),
+      birthday: faker.date.past(),
     })
     .map(async user => {
       const register = promisify(User.register, User);
@@ -63,6 +64,7 @@ const seed = async () => {
           name: user.name,
           email: user.email,
           avatar: user.avatar,
+          birthday: user.birthday,
         }),
         user.password
       );

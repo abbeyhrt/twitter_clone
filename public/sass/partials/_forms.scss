@@ -27,11 +27,23 @@ $FS-footer: 0.618em;
 }
 
 .button {
-  background-color: $blue40;
+  color: $blue40; // border: 4px;
+  border-color: $blue40;
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 16%;
-  border: 0px;
+  font-size: $FS-body;
+  font-family: 'Helvetica Neue';
+  font-weight: 300;
+}
+
+.follow {
+  color: $blue40; // border: 4px;
+  border-color: $blue40;
+  // margin-top: 0.75rem;
+  // margin-bottom: 1rem;
+  // padding: 0px;
+  border-radius: 100%;
   font-size: $FS-body;
   font-family: 'Helvetica Neue';
   font-weight: 300;

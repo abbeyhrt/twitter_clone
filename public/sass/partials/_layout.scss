@@ -69,11 +69,19 @@ a {
 
 .link {
   display: block;
-  margin: 0px;
+  margin: 0rem;
   padding: 1rem;
   text-decoration: none;
   color: $text-color;
 }
+//3360
+// .link_account {
+//   display: block;
+//   margin: 1rem;
+//   padding: 0px;
+//   text-decoration: none;
+//   color: $text-color;
+// }
 
 .link:hover {
   color: $blue40;
@@ -88,9 +96,9 @@ a {
 }
 
 .gravatar {
-  padding: 1rem;
+  // margin: 1rem;
   min-width: 30px;
-  height: 30px;
+  height: 48px;
   border-radius: 50%;
 }
 

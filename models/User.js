@@ -27,6 +27,10 @@ const userSchema = new Schema({
     required: 'Please supply an avatar!',
     trim: true,
   },
+  birthday: {
+    type: Date,
+    required: 'Tell us your birthday!',
+  },
   // snippet: {
   //   type: mongoose.Schema.ObjectId,
   //   ref: 'Snippet',

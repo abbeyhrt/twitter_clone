@@ -1,23 +1,36 @@
 $offwhite: #e3ecec;
 $innerwhite: #fbfcfc;
 
-.snippet-author {
+.snippet {
   display: flex;
-  margin-left: 8%;
-  margin-right: 8%;
+  flex-direction: column;
+  padding: 1rem;
+  // margin: 1rem;
+}
+
+.snippet-author {
+  // display: flex;
+  //  margin-left: 8%;
+  //  margin-right: 8%;
   //margin-bottom: 1rem;
   // justify-content: space-between;
   background-color: $innerwhite;
+  //margin: 1rem;
 }
 
+.author-link {
+  margin: 0px;
+  padding: 0px;
+}
 // .time {
 //   //justify-content: flex-end;
 // }
 .snippet-content {
   display: flex;
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-bottom: 0.5rem;
-  justify-content: space-between;
+  margin: 1rem;
+  //  margin-left: 8%;
+  //  margin-right: 8%;
+  //  margin-bottom: 0.5rem;
+  // justify-content: space-between;
   background-color: $innerwhite;
 }
